@@ -1,0 +1,22 @@
+#puzzle-container {
+  width: 600px;
+  height: 400px;
+  background-image: url('img.jpg');
+  /* Замените 'your-image.jpg' на свой путь к изображению */
+  background-size: cover;
+  position: relative;
+}
+
+.piece {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #000;
+  position: absolute;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.piece:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
