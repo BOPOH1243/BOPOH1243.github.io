@@ -1,27 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Image</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Резюме - Фролов Андрей Сергеевич</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container centered-text">
+    <div class="container mt-5">
+        <!-- Header -->
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <a href="https://vk.com/id458910922" class="btn btn-primary centered-text">Ежомба</a>
+            <div class="col-md-4">
+                <img src="photo.png" alt="Фото" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h1>Фролов Андрей Сергеевич</h1>
+                <p><strong>Телефон:</strong> +7 (912) 212-05-21</p>
+                <p><strong>Telegram:</strong> <a href="https://t.me/black_backed_jackal">@black_backed_jackal</a></p>
+                <p><strong>Расположение:</strong> Готов к релокации, предпочтительна удалёнка</p>
             </div>
         </div>
+
+        <!-- Специализация -->
+        <div class="mt-4">
+            <h2>Специализация</h2>
+            <p>Backend-разработчик / Разработчик парсеров</p>
+        </div>
+
+        <!-- Опыт работы -->
+        <div class="mt-4">
+            <h2>Опыт работы</h2>
+            <div>
+                <h4>Brandpol</h4>
+                <p><strong>Разработчик парсеров и инфраструктуры</strong></p>
+                <p>Январь 2022 – настоящее время</p>
+                <ul>
+                    <li>Разработка и поддержка парсеров для платформы Aparser.</li>
+                    <li>Разработка API для обхода защит Cloudflare и Qrator.</li>
+                    <li>Решение задач по автоматизации ввода капчи.</li>
+                    <li>Создание всей сопутствующей инфраструктуры для обеспечения эффективного парсинга.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stack -->
+        <div class="mt-4">
+            <h2>Stack</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Python</li>
+                        <li>Django Framework</li>
+                        <li>Git</li>
+                        <li>SQL</li>
+                        <li>REST</li>
+                        <li>Django Rest Framework</li>
+                        <li>FastAPI</li>
+                        <li>Flask</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>API</li>
+                        <li>Backend</li>
+                        <li>RabbitMQ</li>
+                        <li>Docker</li>
+                        <li>GitHub</li>
+                        <li>Celery</li>
+                        <li>JSON API</li>
+                        <li>JavaScript</li>
+                        <li>Linux</li>
+                        <li>Node.js</li>
+                        <li>Docker-compose</li>
+                        <li>Data Mining</li>
+                        <li>ORM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Образование -->
+        <div class="mt-4">
+            <h2>Образование</h2>
+            <p>Бакалавриат (неполное высшее), 2 курса из 4.</p>
+        </div>
+
+        <!-- Проекты -->
+        <div class="mt-4">
+            <h2>Проекты</h2>
+            <ul>
+                <li>
+                    <strong>Телеграм-бот для учёта рабочего времени сотрудников:</strong> разработан для начальника смены, позволяющий автоматизировать контроль за сменами сотрудников и вести статистику их рабочего времени.
+                </li>
+                <li>
+                    <strong>Читы на C++ для Dota 2 и CSGO:</strong> реализация функций для игровой механики, позволяющих улучшать навыки игроков.
+                </li>
+            </ul>
+        </div>
+
+        <!-- О себе -->
+        <div class="mt-4 mb-5">
+            <h2>О себе</h2>
+            <p>Умный, красивый, в меру упитанный мужчина в полном расцвете сил.</p>
+            <p>Люблю Warhammer и лисичек.</p>
+            <p>Считаю, что любая работа – это искусство.</p>
+            <p>Всегда открыт к новым задачам и креативным решениям.</p>
+        </div>
     </div>
-    <div id="puzzle-container"></div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
