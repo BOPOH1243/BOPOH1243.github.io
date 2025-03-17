@@ -1,117 +1,306 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме - Фролов Андрей Сергеевич</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary-color: #2A2A72;
+      --secondary-color: #009FFD;
+      --light-color: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light-color);
+    }
+    
+    /* Анимации */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    
+    /* Стили для навбара */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Герой секция */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 120px 0;
+    }
+    
+    .hero-section img {
+      border: 3px solid white;
+    }
+    
+    /* Карточки проектов */
+    .project-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      overflow: hidden;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Стили для бейджей навыков */
+    .skill-badge {
+      background: var(--primary-color);
+      color: white;
+      font-weight: 500;
+      margin: 5px;
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 50px;
+    }
+    
+    /* Секция опыта работы */
+    .experience-item {
+      border-left: 3px solid var(--primary-color);
+      padding-left: 20px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .experience-item::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      position: absolute;
+      left: -7px;
+      top: 5px;
+    }
+    
+    /* Футер */
+    footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 40px 0;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container mt-5">
-        <!-- Header -->
-        <div class="row">
-            <div class="col-md-4">
-                <img src="photo.png" alt="Фото" class="img-fluid">
-            </div>
-            <div class="col-md-8">
-                <h1>Фролов Андрей Сергеевич</h1>
-                <p><strong>Телефон:</strong> +7 (912) 212-05-21</p>
-                <p><strong>Telegram:</strong> <a href="https://t.me/black_backed_jackal">@black_backed_jackal</a></p>
-                <p><strong>Расположение:</strong> Готов к релокации, предпочтительна удалёнка</p>
-            </div>
-        </div>
-
-        <!-- Специализация -->
-        <div class="mt-4">
-            <h2>Специализация</h2>
-            <p>Backend-разработчик / Разработчик парсеров</p>
-        </div>
-
-        <!-- Опыт работы -->
-        <div class="mt-4">
-            <h2>Опыт работы</h2>
-            <div>
-                <h4>Brandpol</h4>
-                <p><strong>Разработчик парсеров и инфраструктуры</strong></p>
-                <p>Январь 2022 – июль 2024</p>
-                <ul>
-                    <li>Разработка и поддержка парсеров для платформы Aparser.</li>
-                    <li>Разработка API для обхода защит Cloudflare и Qrator.</li>
-                    <li>Решение задач по автоматизации ввода капчи.</li>
-                    <li>Создание всей сопутствующей инфраструктуры для обеспечения эффективного парсинга.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Stack -->
-        <div class="mt-4">
-            <h2>Stack</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li>Python</li>
-                        <li>Django Framework</li>
-                        <li>Git</li>
-                        <li>SQL</li>
-                        <li>REST</li>
-                        <li>Django Rest Framework</li>
-                        <li>FastAPI</li>
-                        <li>Flask</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li>API</li>
-                        <li>Backend</li>
-                        <li>RabbitMQ</li>
-                        <li>Docker</li>
-                        <li>GitHub</li>
-                        <li>Celery</li>
-                        <li>JSON API</li>
-                        <li>JavaScript</li>
-                        <li>Linux</li>
-                        <li>Node.js</li>
-                        <li>Docker-compose</li>
-                        <li>Data Mining</li>
-                        <li>ORM</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Образование -->
-        <div class="mt-4">
-            <h2>Образование</h2>
-            <p>Бакалавриат (неполное высшее), 2 курса из 4.</p>
-        </div>
-
-        <!-- Проекты -->
-        <div class="mt-4">
-            <h2>Проекты</h2>
-            <ul>
-                <li>
-                    <strong>Телеграм-бот для учёта рабочего времени сотрудников:</strong> разработан для начальника смены, позволяющий автоматизировать контроль за сменами сотрудников и вести статистику их рабочего времени.
-                </li>
-                <li>
-                    <strong>Читы на C++ для Dota 2 и CSGO:</strong> реализация функций для игровой механики, позволяющих улучшать навыки игроков.
-                </li>
-            </ul>
-        </div>
-
-        <!-- О себе -->
-        <div class="mt-4 mb-5">
-            <h2>О себе</h2>
-            <p>Умный, красивый, в меру упитанный мужчина в полном расцвете сил.</p>
-            <p>Люблю Warhammer и лисичек.</p>
-            <p>Считаю, что любая работа – это искусство.</p>
-            <p>Всегда открыт к новым задачам и креативным решениям.</p>
-        </div>
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">DevPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#projects">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Опыт работы</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Герой секция -->
+  <section class="hero-section text-center fade-in">
+    <div class="container">
+      <img src="photo.png" alt="Фото" class="rounded-circle mb-4">
+      <h1 class="display-4 fw-bold mb-3">Фролов Андрей</h1>
+      <p class="lead mb-4">Full-stack разработчик с фокусом на современные веб-технологии</p>
+      <div class="social-links">
+        <a href="https://github.com/BOPOH1243/" class="text-white mx-3"><i class="fab fa-github fa-2x"></i></a>
+        <!-- <a href="#" class="text-white mx-3"><i class="fab fa-linkedin fa-2x"></i></a> -->
+        <a href="https://t.me/black_backed_jackal" class="text-white mx-3"><i class="fab fa-telegram fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section id="projects" class="py-5 fade-in">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Мои проекты</h2>
+      <div class="row g-4">
+        <!-- Проект 1 -->
+        <div class="col-md-4">
+          <div class="project-card card h-100">
+            <img src="ozon_logo.jpg" class="card-img-top" alt="Веб-приложение">
+            <div class="card-body">
+              <h5 class="card-title">Парсер Ozon</h5>
+              <p class="card-text">Парсер товаров и отзывов маркетплейса Ozon, обход защиты от сбора данных</p>
+              <span class="badge bg-success">Node.js</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Проект 2 -->
+        <div class="col-md-4">
+          <div class="project-card card h-100">
+            <img src="chimera_logo.webp" class="card-img-top" alt="Мобильное приложение">
+            <div class="card-body">
+              <h5 class="card-title">чит-клиент Chimera</h5>
+              <p class="card-text">Чит клиент для CS:GO, включающий <span class="badge bg-danger">Wallhack</span>, <span class="badge bg-danger">Triggerbot</span> и <span class="badge bg-danger">Radarhack</span> </p>
+              <span class="badge bg-info">Python</span>
+              <span class="badge bg-info">Pymem</span>
+              <span class="badge bg-info">Tkinter</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Проект 3 -->
+        <div class="col-md-4">
+          <div class="project-card card h-100">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="API Сервис">
+            <div class="card-body">
+              <h5 class="card-title">API Сервис</h5>
+              <p class="card-text">Микросервисная архитектура на Python</p>
+              <span class="badge bg-info">Python</span>
+              <span class="badge bg-dark">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Опыт работы -->
+  <section id="experience" class="py-5 bg-light fade-in">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Опыт работы</h2>
+      <div class="experience-item">
+        <h4>Инженер по сбору данных, Brandpol</h4>
+        <p>
+          Разрабатывал инфраструктуру для сбора данных, создавал и оптимизировал множество парсеров для веб-сайтов. 
+          Обходил защитные механизмы, предотвращающие массовый сбор данных, и успешно осуществлял парсинг API мобильных приложений.
+        </p>
+      </div>
+      <!-- Можно добавить больше блоков опыта, если необходимо -->
+    </div>
+  </section>
+
+  <!-- Навыки -->
+  <section id="skills" class="py-5 fade-in">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Технологии</h2>
+      <div class="row g-4 text-center">
+        <!-- JavaScript -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-js fa-3x mb-2"></i>
+            <div>JavaScript</div>
+          </div>
+        </div>
+        <!-- React -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-react fa-3x mb-2"></i>
+            <div>React</div>
+          </div>
+        </div>
+        <!-- Node.js -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-node fa-3x mb-2"></i>
+            <div>Node.js</div>
+          </div>
+        </div>
+        <!-- Python -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-python fa-3x mb-2"></i>
+            <div>Python</div>
+          </div>
+        </div>
+        <!-- Django -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" style="height: 40px;" class="mb-2">
+            <div>Django</div>
+          </div>
+        </div>
+        <!-- Flask -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" style="height: 40px;" class="mb-2">
+            <div>Flask</div>
+          </div>
+        </div>
+        <!-- FastAPI -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" style="height: 40px;" class="mb-2">
+            <div>FastAPI</div>
+          </div>
+        </div>
+        <!-- Docker -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-docker fa-3x mb-2"></i>
+            <div>Docker</div>
+          </div>
+        </div>
+        <!-- PostgreSQL -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" style="height: 40px;" class="mb-2">
+            <div>PostgreSQL</div>
+          </div>
+        </div>
+        <!-- HTML -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-html5 fa-3x mb-2"></i>
+            <div>HTML5</div>
+          </div>
+        </div>
+        <!-- CSS -->
+        <div class="col-6 col-md-2">
+          <div class="skill-badge">
+            <i class="fab fa-css3-alt fa-3x mb-2"></i>
+            <div>CSS3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="py-5 fade-in">
+    <div class="container text-center">
+      <h2 class="mb-5 fw-bold">Свяжитесь со мной</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+            <a href="https://t.me/black_backed_jackal?text=%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%B4%D1%80%D1%83%D0%B6%D0%B8%D1%89%D0%B5%2C%20%D1%8F%20%D1%81%20%D1%82%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE%20github.io">
+                <button class="btn btn-primary btn-lg" type="submit">Дёрнуть в телеге</button>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="text-center fade-in">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 DevPortfolio. Все права защищены</p>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
