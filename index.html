@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио</title>
+  <title>Ein landsknecht bin ich von natur</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
+
   <style>
     :root {
       --primary-color: #2A2A72;
       --secondary-color: #009FFD;
       --light-color: #f8f9fa;
     }
-    
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: var(--light-color);
     }
-    
+
     /* Анимации */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    
+
     .fade-in {
       animation: fadeIn 1s ease-out;
     }
-    
+
     /* Стили для навбара */
     .navbar {
       background: rgba(255, 255, 255, 0.95);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Герой секция */
     .hero-section {
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
       padding: 120px 0;
     }
-    
+
     .hero-section img {
       border: 3px solid white;
     }
-    
+
     /* Карточки проектов */
     .project-card {
       transition: transform 0.3s, box-shadow 0.3s;
       border: none;
       overflow: hidden;
     }
-    
+
     .project-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Стили для бейджей навыков */
     .skill-badge {
       background: var(--primary-color);
@@ -70,7 +78,7 @@
       padding: 10px 15px;
       border-radius: 50px;
     }
-    
+
     /* Секция опыта работы */
     .experience-item {
       border-left: 3px solid var(--primary-color);
@@ -78,7 +86,7 @@
       margin-bottom: 30px;
       position: relative;
     }
-    
+
     .experience-item::before {
       content: "";
       width: 12px;
@@ -89,7 +97,7 @@
       left: -7px;
       top: 5px;
     }
-    
+
     /* Футер */
     footer {
       background: #1a1a1a;
@@ -98,11 +106,12 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Навигация -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">DevPortfolio</a>
+      <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">DevEye</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -123,6 +132,7 @@
       <img src="photo.png" alt="Фото" class="rounded-circle mb-4">
       <h1 class="display-4 fw-bold mb-3">Фролов Андрей</h1>
       <p class="lead mb-4">Full-stack разработчик с фокусом на современные веб-технологии</p>
+
       <div class="social-links">
         <a href="https://github.com/BOPOH1243/" class="text-white mx-3"><i class="fab fa-github fa-2x"></i></a>
         <!-- <a href="#" class="text-white mx-3"><i class="fab fa-linkedin fa-2x"></i></a> -->
@@ -130,7 +140,6 @@
       </div>
     </div>
   </section>
-
   <!-- Проекты -->
   <section id="projects" class="py-5 fade-in">
     <div class="container">
@@ -147,28 +156,30 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Проект 2 -->
         <div class="col-md-4">
           <div class="project-card card h-100">
             <img src="chimera_logo.png" class="card-img-top" alt="Мобильное приложение">
             <div class="card-body">
               <h5 class="card-title">чит-клиент Chimera</h5>
-              <p class="card-text">Чит клиент для CS:GO, включающий <span class="badge bg-danger">Wallhack</span>, <span class="badge bg-danger">Triggerbot</span> и <span class="badge bg-danger">Radarhack</span> </p>
+              <p class="card-text">Чит клиент для CS:GO, включающий <span class="badge bg-danger">Wallhack</span>, <span
+                  class="badge bg-danger">Triggerbot</span> и <span class="badge bg-danger">Radarhack</span> </p>
               <span class="badge bg-info">Python</span>
               <span class="badge bg-info">Pymem</span>
               <span class="badge bg-info">Tkinter</span>
             </div>
           </div>
         </div>
-        
+
         <!-- Проект 3 -->
         <div class="col-md-4">
           <div class="project-card card h-100">
             <img src="api_lb.png" class="card-img-top" alt="API Сервис">
             <div class="card-body">
               <h5 class="card-title">API система распределения нагрузки на сервера</h5>
-              <p class="card-text">API система распределения нагрузки на сервера ресурсоёмких парсеров (selenium, puppeteer)</p>
+              <p class="card-text">API система распределения нагрузки на сервера ресурсоёмких парсеров (selenium,
+                puppeteer)</p>
               <span class="badge bg-info">Python</span>
               <span class="badge bg-info">Fastapi</span>
               <span class="badge bg-danger">Redis</span>
@@ -188,10 +199,18 @@
       <div class="experience-item">
         <h4>Инженер по сбору данных, Brandpol 2021 - 2024</h4>
         <p>
-          Разрабатывал инфраструктуру для сбора данных, создавал и оптимизировал множество парсеров для веб-сайтов. 
-          Обходил защитные механизмы, предотвращающие массовый сбор данных, и успешно осуществлял парсинг API мобильных приложений.
+          Разрабатывал инфраструктуру для сбора данных, создавал и оптимизировал множество парсеров для веб-сайтов.
+          Обходил защитные механизмы, предотвращающие массовый сбор данных, и успешно осуществлял парсинг API мобильных
+          приложений.
           Создавал API решения для обхода защит и парсинга данных.
         </p>
+      </div>
+      <div class="container experience-item" style="color: whitesmoke;">
+        <div class="github-contribution">
+          <img src="https://github-contributions-api.deno.dev/BOPOH1243.svg" alt="GitHub Contributions"
+            class="img-fluid rounded shadow-sm" />
+            <p style="color: rgba(0, 0, 0, 0);">ЭТО ЛОЖЬ, Я ВСЕХ НАЕБАЛ И СДЕЛАЛ КОММИТЫ ЗАДНИМ ЧИСЛОМ!</p>
+        </div>
       </div>
       <!-- Можно добавить больше блоков опыта, если необходимо -->
     </div>
@@ -233,21 +252,24 @@
         <!-- Django -->
         <div class="col-6 col-md-2">
           <div class="skill-badge">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" style="height: 40px;" class="mb-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django"
+              style="height: 40px;" class="mb-2">
             <div>Django</div>
           </div>
         </div>
         <!-- Flask -->
         <div class="col-6 col-md-2">
           <div class="skill-badge">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" style="height: 40px;" class="mb-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"
+              style="height: 40px;" class="mb-2">
             <div>Flask</div>
           </div>
         </div>
         <!-- FastAPI -->
         <div class="col-6 col-md-2">
           <div class="skill-badge">
-            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" style="height: 40px;" class="mb-2">
+            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" style="height: 40px;"
+              class="mb-2">
             <div>FastAPI</div>
           </div>
         </div>
@@ -261,7 +283,8 @@
         <!-- PostgreSQL -->
         <div class="col-6 col-md-2">
           <div class="skill-badge">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" style="height: 40px;" class="mb-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL" style="height: 40px;" class="mb-2">
             <div>PostgreSQL</div>
           </div>
         </div>
@@ -289,9 +312,10 @@
       <h2 class="mb-5 fw-bold">Свяжитесь со мной</h2>
       <div class="row justify-content-center">
         <div class="col-md-6">
-            <a href="https://t.me/black_backed_jackal?text=%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%B4%D1%80%D1%83%D0%B6%D0%B8%D1%89%D0%B5%2C%20%D1%8F%20%D1%81%20%D1%82%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE%20github.io">
-                <button class="btn btn-primary btn-lg" type="submit">Дёрнуть в телеге</button>
-            </a>
+          <a
+            href="https://t.me/black_backed_jackal?text=%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%B4%D1%80%D1%83%D0%B6%D0%B8%D1%89%D0%B5%2C%20%D1%8F%20%D1%81%20%D1%82%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE%20github.io">
+            <button class="btn btn-primary btn-lg" type="submit">Дёрнуть в телеге</button>
+          </a>
         </div>
       </div>
     </div>
@@ -307,4 +331,5 @@
   <!-- Скрипты -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
